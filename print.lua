@@ -828,6 +828,96 @@ local args = {
 Fire("Collect Lootbag",unpack(args)) end end end
     end
 })
+
+
+--Boost System | Old
+local Tab3 = Window:MakeTab({
+	Name = "Boost",
+	Icon = "rbxassetid://7743866529",
+	PremiumOnly = false
+})
+
+local Section = Tab3:AddSection({
+	Name = "Auto Boost Functions:"
+})
+
+Tab3:AddToggle({
+    Name = "Auto Use Triple Coins",
+    Default = false,
+    Callback = function(tric)
+    getgenv().kff = tric
+    while kff and wait(3) do
+local args = {
+    [1] = "Triple Coins"
+}
+
+if not game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Coins") then
+    Fire("Activate Boost",unpack(args))
+elseif game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Coins") then
+    if game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Coins").TimeLeft.Text <= "00:00:10" then
+            Fire("Activate Boost",unpack(args))
+
+    end end end end
+})
+Tab3:AddToggle({
+    Name = "Auto Use Triple Damage",
+    Default = false,
+    Callback = function(tric)
+    getgenv().kff = tric
+    while kff and wait(3) do
+local args = {
+    [1] = "Triple Damage"
+}
+
+if not game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Damage") then
+    Fire("Activate Boost",unpack(args))
+elseif game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Damage") then
+    if game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Damage").TimeLeft.Text <= "00:00:10" then
+            Fire("Activate Boost",unpack(args))
+
+    end end end end
+})
+Tab3:AddToggle({
+    Name = "Auto Use Super Lucky",
+    Default = false,
+    Callback = function(tric)
+    getgenv().kff = tric
+    while kff and wait(3) do
+local args = {
+    [1] = "Super Lucky"
+}
+
+if not game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Super Lucky") then
+    Fire("Activate Boost",unpack(args))
+elseif game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Super Lucky") then
+    if game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Super Lucky").TimeLeft.Text <= "00:00:10" then
+            Fire("Activate Boost",unpack(args))
+
+    end end end end
+})
+Tab3:AddToggle({
+    Name = "Auto Use Ultra Lucky",
+    Default = false,
+    Callback = function(tric)
+    getgenv().kff = tric
+    while kff and wait(3) do
+local args = {
+    [1] = "Ultra Lucky"
+}
+
+if not game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Ultra Lucky") then
+    Fire("Activate Boost",unpack(args))
+elseif game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Ultra Lucky") then
+    if game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Ultra Lucky").TimeLeft.Text <= "00:00:10" then
+            Fire("Activate Boost",unpack(args))
+
+    end end end end
+})
+
+
+
+local lib = require(game.ReplicatedStorage:WaitForChild("Framework"):WaitForChild("Library"))
+
 --Eggs System | Update
 local EggsTab = Window:MakeTab({
 	Name = "Eggs",
@@ -938,8 +1028,6 @@ elseif getgenv().goldenMode == false then
 CatHub = {[1] = Egg, [2] = false, [3] = true}
 Invoke("Buy Egg",unpack(CatHub))
 end end end})
-
-local lib = require(game.ReplicatedStorage:WaitForChild("Framework"):WaitForChild("Library"))
 
 local Section = Tab9:AddSection({
 	Name = "Settings"
@@ -1217,90 +1305,6 @@ Tab9:AddToggle({
                           Args[#Args+1] = v[#Args+1]
                       end
                       Invoke("Use Rainbow Machine", Args) end end end end end
-})
-
---Boost System | Old
-local Tab3 = Window:MakeTab({
-	Name = "Boost",
-	Icon = "rbxassetid://7743866529",
-	PremiumOnly = false
-})
-
-local Section = Tab3:AddSection({
-	Name = "Auto Boost Functions:"
-})
-
-Tab3:AddToggle({
-    Name = "Auto Use Triple Coins",
-    Default = false,
-    Callback = function(tric)
-    getgenv().kff = tric
-    while kff and wait(3) do
-local args = {
-    [1] = "Triple Coins"
-}
-
-if not game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Coins") then
-    Fire("Activate Boost",unpack(args))
-elseif game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Coins") then
-    if game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Coins").TimeLeft.Text <= "00:00:10" then
-            Fire("Activate Boost",unpack(args))
-
-    end end end end
-})
-Tab3:AddToggle({
-    Name = "Auto Use Triple Damage",
-    Default = false,
-    Callback = function(tric)
-    getgenv().kff = tric
-    while kff and wait(3) do
-local args = {
-    [1] = "Triple Damage"
-}
-
-if not game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Damage") then
-    Fire("Activate Boost",unpack(args))
-elseif game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Damage") then
-    if game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Damage").TimeLeft.Text <= "00:00:10" then
-            Fire("Activate Boost",unpack(args))
-
-    end end end end
-})
-Tab3:AddToggle({
-    Name = "Auto Use Super Lucky",
-    Default = false,
-    Callback = function(tric)
-    getgenv().kff = tric
-    while kff and wait(3) do
-local args = {
-    [1] = "Super Lucky"
-}
-
-if not game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Super Lucky") then
-    Fire("Activate Boost",unpack(args))
-elseif game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Super Lucky") then
-    if game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Super Lucky").TimeLeft.Text <= "00:00:10" then
-            Fire("Activate Boost",unpack(args))
-
-    end end end end
-})
-Tab3:AddToggle({
-    Name = "Auto Use Ultra Lucky",
-    Default = false,
-    Callback = function(tric)
-    getgenv().kff = tric
-    while kff and wait(3) do
-local args = {
-    [1] = "Ultra Lucky"
-}
-
-if not game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Ultra Lucky") then
-    Fire("Activate Boost",unpack(args))
-elseif game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Ultra Lucky") then
-    if game.Players.LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Ultra Lucky").TimeLeft.Text <= "00:00:10" then
-            Fire("Activate Boost",unpack(args))
-
-    end end end end
 })
 
 --Gui System | Update
