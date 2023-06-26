@@ -939,6 +939,8 @@ CatHub = {[1] = Egg, [2] = false, [3] = true}
 Invoke("Buy Egg",unpack(CatHub))
 end end end})
 
+local lib = require(game.ReplicatedStorage:WaitForChild("Framework"):WaitForChild("Library"))
+
 local Section = Tab9:AddSection({
 	Name = "Settings"
 })
