@@ -1416,10 +1416,6 @@ local Tab8 = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local Section = Tab8:AddSection({
-	Name = "Visual Functions"
-})
-
 function GetGamepasses()
 	lib.Save.Get().Gamepasses = {}
 	for i, v in pairs(lib.Directory.Gamepasses) do
