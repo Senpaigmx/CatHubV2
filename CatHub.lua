@@ -1,1 +1,1 @@
-print("Cat Hub Revival")
+print"Cat Hub Revival"
